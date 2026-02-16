@@ -28,7 +28,6 @@ Edit the oauth.yml
   name: palmeto-users
   type: HTPasswd
 </pre>
-```
 
 Given access permissions to the users created
 ```
