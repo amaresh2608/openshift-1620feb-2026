@@ -102,11 +102,43 @@
 - application + all dependent libraries + any dependencies => bundled => docker image
 </pre>
 
+## Info - Linux Namespaces
+<pre>
+- Linux supports a total of 8 types of namespaces
+- mnt
+  - useful to mount multiple folders as filesystem
+- pid
+  - a process may have a unique PID system-wide and a different pid within the namespace as 1
+- net
+  - isolates network stack
+  - ip addresses
+  - ports
+  - routing tables
+- ipc
+  - message queues
+  - mutex, semphares, etc
+- uts
+  - hostname
+  - domain names, etc
+- user
+  - isolates users and groups
+  - rootless containers use this namespace
+- cgroup
+  - virtualizes /proc/self/cgroup
+  - containers only see their cgroup hierarchy
+- time
+  - useful for checkpoint/restore containers
+  - system clock
+</pre>
+
 ## Info - Docker Container
 <pre>
 - is a running instance of a Docker image
 - in order to create a Docker container, the respective Docker image must be present in the local docker registry
 - typically in Linux, local registry folder will be /var/lib/docker
+- each container represents a single application process
+- each container has its own network namespace
+- each container has its own pid namespace
 </pre>
 
 ## Info - Docker Registry
