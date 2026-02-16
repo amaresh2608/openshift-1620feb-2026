@@ -333,3 +333,18 @@ Delete multiple containers forcibly ( You will end up deleting containers create
 ```
 docker rm -f $(docker ps -aq)
 ```
+
+## Lab - Create a container and start it later on-demand
+```
+docker create -it --name ubuntu1-jegan --hostname ubuntu1-jegan ubuntu:latest /bin/bash
+
+# The below command won't show the ubuntu1-jegan container as it is not running
+docker ps | grep jegan
+
+#Start the container manually
+docker start ubuntu1-jegan
+
+#List and see the container in running state now
+docker ps | grep jegan
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c617008b-c6c8-4777-af92-1a03169c7e64" />
