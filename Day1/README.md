@@ -70,6 +70,9 @@
 - it is very user-friendly, hence almost all end-users only are aware of Container Engines
 - examples
   - Docker 
+    - depends on containerd, which in turn depends on runC Container runtime
   - Podman
+    - depends on CRI-O container runtime
   - Containerd
+    - depends on runC container runtime
 </pre>
