@@ -271,5 +271,24 @@ docker stop ubuntu2-jegan ubuntu3-jegan
 
 Stopping multiple containers without calling out their names
 ```
-docker stop $(docker ps -q --name="ubuntu.*-jegan")
+docker stop $(docker ps -q -f --name="ubuntu.*-jegan")
 ```
+
+## Lab - Starting container
+Starting a single exited container
+```
+docker start ubuntu1-jegan
+```
+
+Starting multiple exited containers
+```
+docker start ubuntu2-jegan ubuntu3-jegan
+```
+
+Starting multiple containers without their names
+```
+docker start $(docker ps -aq)
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/76b9b445-6c45-4a4b-af81-5da07cc4f2e4" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5a577fc3-892b-452c-94a5-a261579ab36d" />
