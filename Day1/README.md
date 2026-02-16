@@ -223,3 +223,17 @@ docker images
 docker rmi hello-world:latest
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2897d7bd-74b3-4c73-abc1-699992d12131" />
+
+## Lab - Creating a container in background(daemon) mode
+```
+
+# Creating container and running it in background
+docker run -dit --name ubuntu1-jegan --hostname ubuntu1-jegan ubuntu:latest /bin/bash
+docker run -dit --name ubuntu2-jegan --hostname ubuntu2-jegan ubuntu:latest /bin/bash
+docker run -dit --name ubuntu3-jegan --hostname ubuntu3-jegan ubuntu:latest /bin/bash
+
+# List all currently running containers
+docker ps
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/97b0b6fc-e805-4f7f-8719-3f2805055451" />
+
