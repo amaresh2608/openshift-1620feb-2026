@@ -91,3 +91,33 @@
 ## Info - Docker High-Level Architecture
 ![Docker](docker-architecture.jpg)
 ![Docker](DockerHighLevelArchitecture.png)
+
+## Info - Docker Image
+<pre>
+- is a JSON file that refers one to many Docker Image Layers
+- is a blueprint/specification of containers
+- all the necessary software tools that are required to run an application are bundled as part of the Docker Image
+- this is similar to Window12OS.iso, RHEL-os.iso
+- with a Docker Image, we can create any number of containers
+- application + all dependent libraries + any dependencies => bundled => docker image
+</pre>
+
+## Info - Docker Container
+<pre>
+- is a running instance of a Docker image
+- in order to create a Docker container, the respective Docker image must be present in the local docker registry
+- typically in Linux, local registry folder will be /var/lib/docker
+</pre>
+
+## Info - Docker Registry
+<pre>
+- is a collection of many Docker images
+- there are 3 types of Docker Registry
+  1. Local Docker Registry
+     - /var/lib/docker folder
+  2. Private Docker Registry ( optional )
+     - can be setup using Sonatype Nexus or JFrog Artifactory
+  3. Remote Docker Registry 
+     - it is a website maintained by Docker Inc organization that supports the Docker Engine
+     - it uses a Server similar to Sonatype Nexus or JFrog Artifactory
+</pre>
