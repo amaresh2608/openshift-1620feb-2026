@@ -147,6 +147,7 @@
 - each container has its own pid namespace
 - each container has its own mnt namespace
 - each container has its own uts, ipc, user and cgroup namespaces
+- each container has got its own port range from 0-65536
 </pre>
 
 ## Info - Docker Registry
