@@ -387,3 +387,15 @@ exit
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c7cf2a9d-a96d-4bfd-ad7a-4cc1765ebb01" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8dc0e46e-c37f-4f0e-abf8-e28db9dcdb22" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9f73be8c-d388-4edf-9c89-aae5d810aa4f" />
+
+## Lab - Creating a container in the foreground(interactive) mode
+```
+docker run -it --name ubuntu2-jegan --hostname ubuntu2-jegan ubuntu:latest /bin/bash
+hostname
+hostname -i
+ls
+exit
+docker ps
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/366a8bf6-f66c-44c7-b386-5e3584945035" />
