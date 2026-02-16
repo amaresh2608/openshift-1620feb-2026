@@ -404,3 +404,26 @@ docker ps
 
 We are going to create a load-balancer setup something like below
 <img width="75%" height="75%" alt="image" src="https://github.com/user-attachments/assets/7122c6b7-5820-407e-bdf6-5bac55c5b40d" />
+
+Let's create 3 web server containers using nginx:latest image from Docker Hub Remote Registry
+```
+docker run -d --name nginx1-jegan --hostname nginx1-jegan nginx:latest
+docker run -d --name nginx2-jegan --hostname nginx2-jegan nginx:latest
+docker run -d --name nginx3-jegan --hostname nginx3-jegan nginx:latest
+```
+
+List and see if the above containers are running as expected
+```
+docker ps | grep jegan
+```
+
+Let's create the loadbalancer container
+```
+docker run -d --name lb-jegan --hostname lb-jegan -p 8080:80 nginx:latest
+```
+
+List and see if all 4 containers are running
+```
+docker ps | grep jegan
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c6f1c786-a9fd-4ddf-84ac-788ddc79f919" />
