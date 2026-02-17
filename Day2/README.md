@@ -240,3 +240,35 @@ crictl images
 
 crictl ps
 ```
+
+## Lab - Let's create a project to deploy our application
+In the command below, replace 'jegan' with your name
+```
+oc new-project jegan
+```
+
+List all projects
+```
+oc get projects
+oc get project
+```
+
+Find more details about a project
+```
+oc describe jegan
+```
+
+Switching between projects
+```
+oc project default
+```
+
+Finding the currently active project
+```
+oc project
+```
+
+Switch back to your project
+```
+oc project jegan
+```
