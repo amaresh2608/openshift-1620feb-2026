@@ -285,10 +285,10 @@ oc project jegan
 oc get imagestreams -n openshift | grep nginx
 
 # Server 1 (192.168.10.200)
-oc create deployment nginx --image=default-route-openshift-image-registry.apps.ocp4.palmeto.org/openshift/nginx:1.29 --replicas=3
+oc create deployment nginx --image=image-registry.openshift-image-registry.svc:5000/openshift/nginx:1.29 --replicas=3
 
 # Server 2 (192.168.10.201)
-oc create deployment nginx --image=default-route-openshift-image-registry.apps.ocp4.palmeto.org/openshift/nginx:1.30 --replicas=3
+oc create deployment nginx --image=image-registry.openshift-image-registry.svc:5000/openshift/nginx:1.30 --replicas=3
 ```
 
 Let's list the deployments in your project
