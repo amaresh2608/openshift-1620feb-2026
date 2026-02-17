@@ -148,3 +148,40 @@ oc describe node worker01.ocp4.palmeto.org
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c79088df-aceb-4dc7-a191-2c19a5b0333c" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/e00c6bb2-d107-4aeb-a13a-7122a8ed4f75" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d2d42ff7-7b72-44c8-9c3d-61b3de4df15d" />
+
+## Info - Control Plane Components
+<pre>
+- Control Plane components runs in the master node
+- each master nodes has the below Pods
+  1. API Server
+  2. etcd database server
+  3. scheduler
+  4. Controller Managers
+</pre>
+
+## Info - API Server
+<pre>
+- this is the brain/heart of Kubernetes/Openshift cluster
+- this is a Pod 
+- API Server supports REST API for all the features supported in Openshift
+- all the Control Plane components they only talk to API Server via REST calls
+- API Server in returns responds by broadcasting events
+- Each API Server updates the etcd database, it will result API Server sending broadcasting events
+</pre>
+
+## Info - etcd database server
+<pre>
+- it is an opensource project
+- stores data in the form of key/value internally
+- it works as a cluster of etcd instances
+- to form a minimal etcd cluster it requires at 3 etcd db server instance
+- hence, Openshift requires 3 master nodes
+- API Server stores the cluster and application state in the etcd database
+</pre>
+
+## Info - Scheduler
+<pre>
+  
+</pre>
+
+## Info - 
