@@ -253,16 +253,19 @@ List all projects
 oc get projects
 oc get project
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/848f184f-a25c-4ba3-8349-548a335b914b" />
 
 Find more details about a project
 ```
 oc describe project/jegan
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/da9cb399-4b7d-4617-9d3d-ee79aa7ce819" />
 
 Switching between projects
 ```
 oc project default
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8b7752c1-c07b-4cef-b5e7-e64a0702eead" />
 
 Finding the currently active project
 ```
