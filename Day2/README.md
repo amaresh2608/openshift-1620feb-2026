@@ -315,3 +315,11 @@ oc get pod
 oc get po
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/74a4785b-a08d-49f7-88f4-e5441cec03e5" />
+
+In case your pods are reporting ImagePullBack error, you may edit and replace the image as shown below
+```
+oc edit deploy/nginx
+oc get pods -w
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b5d01552-d3af-444c-8690-fa8f91ac5f09" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/48076d33-9687-4997-8766-10beee8ceb43" />
