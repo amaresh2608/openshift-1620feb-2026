@@ -343,4 +343,10 @@ oc get pods
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/956625ee-264e-4f4e-8c39-600afa08e1fe" />
 
+## Lab - Find the application status
+```
+oc describe deploy/nginx
+oc describe rs/nginx-675c65fdcb
+oc describe pod/nginx-675c65fdcb-d9k4k
+```
 
