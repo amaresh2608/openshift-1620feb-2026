@@ -193,6 +193,7 @@ oc describe node worker01.ocp4.palmeto.org
 - this is a Pod that runs in all master nodes  
 - it is a group of many Controllers
 - each Controller manages one type of Openshift Resource
+- Controllers does the application monitoring
 - For example
   - Deployment Controller manages Deployment resource
   - ReplicaSet Controller manages ReplicaSet resource
@@ -202,4 +203,25 @@ oc describe node worker01.ocp4.palmeto.org
   - DaemonSet Controller manages DaemonSet
   - StatefulSet Controller manages StatefulSet
   - Build Controller manages Build 
+</pre>
+
+## Info - Pod
+<pre>
+- is a group of Containers
+- each Pod has atleast 2 Containers
+  - secret infra-container called pause container
+  - application container
+- in addition to the above containers, a Pod may also optionally have many other containers
+- in general, one Pod should have just one application container
+- though technically a Pod may contain many application container, it is not a best practice
+- IP Address is assigned on the Pod level
+  - meaning all containers that are part of a Pod shares the same IP address and Port range ( 0 - 65536 )
+</pre>
+
+## Info - Kubelet
+<pre>
+- this is not a Pod
+- this runs as a Service in every node ( master and worker nodes )
+- this interacts with CRI-O Container Runtime to pull, create and manage containers
+
 </pre>
