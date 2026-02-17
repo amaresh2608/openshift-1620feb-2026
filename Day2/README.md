@@ -1,5 +1,64 @@
 # Day 2
 
+## Info - Container Orchestration Platform
+<pre>
+- Decides where your containerized application workloads are going to run
+- Restarts when those containerized application instances crashes
+- Scales them up/down automatically based on cpu usage or memory usage or based on other performance metrics
+- Handles networking and storage
+- Performs rolling updates
+  - Upgrading your already live application instances from one version to other without downtime
+- Performs load-balancing
+- Supports Scheduling
+- Supports self-healing
+- Supports caling
+- Supports Service Discovery
+  - Containerized applications finds and talks to each other reliably irrespective of where they are running
+- examples
+  - Docker SWARM
+  - Kubernetes
+  - Red Hat Openshift
+</pre>
+
+## Info - Docker SWARM
+<pre>
+- Docker Inc's native Container Orchestration Platform
+- It only supports application containerized using Docker
+- it is very lightweight and user-friendly
+- ideal for learning
+- easy to setup on laptop or even machines with low-end configurations
+- not production grade
+- hence used only in Dev/QA environment
+</pre>
+
+## Info - Kubernetes
+<pre>
+- Kubernetes is developed in Golang by Google
+- it is user-friendly and robust
+- can be installed in laptops with low-end or every high-end configurations
+- even can be installed on Raspberry Pi
+- supports imperative(using commands in command-line) and declarative(using yaml files) to deploy and manage applications
+- time-tested and production-grade
+- can be used in Dev/QA and Production as it is very robust and reliable even for heavy applications
+- the smallest unit that can be deployed in Kubernetes is a Pod
+- Pod is a collection of many related containers
+- Supports many different types of in-built controller to manage Pods
+- User applications runs as containers within Pod
+- Kubernetes as a cluster of many servers ( Virtual Machines or Physical Machines with any Linux Distro )
+- there are 2 types of Nodes(Servers) in Kubernetes
+  1. Master Node 
+  2. Worker Node
+- Kuberentes support many different type of Container Runtime/Engines
+  - Docker
+  - Containerd
+  - Podman
+  - runC container runtime
+  - CRI-O container runtime
+- Kubernetes supports CRI ( Container Runtime Interface )
+  - any Container Runtime that implements the CRI are supported by Kubernetes
+  - Kubernetes interacts with Container Runtimes via the common CRI
+</pre>    
+
 ## Info - Creating and Managing Users,Groups in OpenShift
 <pre>
 - Authentication in OpenShift is managed by authentication operator
