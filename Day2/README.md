@@ -97,6 +97,7 @@
     - in addition to deploy application from container images, 
       applications can also be deployed from source code present in GitHub, GitLab, BitBucket, etc.,
     - Build, BuildConfig ( additional resources they added in Openshift )
+  - comes with an Internal Image Registry that can be accessed by all nodes in Openshift to push/pull container images
 - also supports Serverless declarative CI/CD Framework Tekton
 - Tekton is knative (Kubernetes Native project that supports CI/CD in K8s/Openshift )
 - Openshift supports all Kuberenetes Service
