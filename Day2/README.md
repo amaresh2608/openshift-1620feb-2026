@@ -130,4 +130,6 @@ oc login $(oc whoami --show-server) -u kubeadmin -p xkHzc-Pv36w-NcB5W-EwAd3 --in
 oc get nodes
 kubectl get nodes
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c2ca1b18-4f99-476d-9404-930c066f153e" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d9f859eb-62db-4645-bf71-2c70617ce0da" />
 
