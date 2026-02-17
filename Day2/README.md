@@ -349,4 +349,12 @@ oc describe deploy/nginx
 oc describe rs/nginx-675c65fdcb
 oc describe pod/nginx-675c65fdcb-d9k4k
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/944f13e7-a405-45b8-a5af-3b1569f5e5ed" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9c2534a0-278b-4548-b28a-c171b1037d62" />
 
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/659b32cc-0876-4056-8fc9-43b3803cd7a3" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/73770cfe-8d06-442d-8b5e-9c6d6b6b671b" />
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c7a623bc-ba81-474b-978a-0170b5540d25" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/e1a77efd-21b8-4306-99e5-d689863c600b" />
