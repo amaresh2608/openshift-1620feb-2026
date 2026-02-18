@@ -8,7 +8,7 @@
 - oauth server can be configured to use identify providers such as htpasswd, LDAP, GitLab, etc.,  
 </pre>
 
-## Demo - Installing htpassword utility in Ubuntu
+## Demo - Installing htpassword utility in Ubuntu ( I have already installed this on both servers - so you can skip. Just for your reference)
 ```
 sudo apt install -y apache2-utils
 ```
