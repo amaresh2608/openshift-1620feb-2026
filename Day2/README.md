@@ -83,7 +83,7 @@
 
 ## Info - Red Hat Openshift
 <pre>
-- it is developed on top of Google Kuberenetes
+- it is developed on top of Google Kubernetes
 - in other words, Red Hat Openshift is a Red Hat's distribution of Kubernetes with many additional features
 - comes with world-wide support from Red Hat ( an IBM company )
 - Using the Kubernetes extensions ( Operators ), Openshift team has added many additional useful features
