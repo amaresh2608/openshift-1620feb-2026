@@ -137,6 +137,8 @@ We need to stress the pod with more traffic
 ```
 ab -k -n 200000 -c 500 https://nginx-jegan.apps.ocp4.palmeto.org/
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5c2b7e73-8470-4526-9f72-84b3f522e225" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/04583c99-cbed-4207-ae4e-6dc0948c9cab" />
 
 ## Lab - Creating an user group, add users to group, restrict access to project
 
