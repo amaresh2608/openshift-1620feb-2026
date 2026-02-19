@@ -70,6 +70,7 @@ Note
 - Kubelet monitors the status of the Container created for Pod1, and it periodically updates the status back to API Server in a heart-beat fashion
 - API Server receives these updates, retrieves the Pod database entry from etcd and updates the Pod status
 </pre>
+![Openshift](openshift-internals.png)
 
 
 ## Lab - Creating an user group, add users to group, restrict access to project
