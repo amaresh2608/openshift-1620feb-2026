@@ -115,6 +115,25 @@ Note
 - Second instance will get synchronized pulling updates from mysql-1 and then it will let the mysql-2 get synchronized from mysql-1
 </pre>
 
+## Lab - Horizontal Pod Auto-scaling based on CPU utilization
+```
+oc delete project jegan
+oc new-project jegan
+
+cd ~
+git clone https://github.com/tektutor/openshift-1620feb-2026.git
+cd openshift-1620feb-2026
+cd Day4/auto-scaling
+oc create -f hello-deploy.yml --save-config
+oc get pods
+oc create -f hello-hpa.yml --save-config
+```
+
+We need to stress the pod with more traffic
+```
+ab -k -n 200000 -c 500 https://nginx-jegan.apps.ocp4.palmeto.org
+```
+
 ## Lab - Creating an user group, add users to group, restrict access to project
 
 Let's login as administrator
