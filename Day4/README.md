@@ -134,3 +134,20 @@ affinity:
           values:
           - qa
 ```
+
+## Lab - Draining a node for maintenance
+
+Prevents new pods getting scheduled in to worker01
+```
+oc adm cordon worker01.ocp4.palmeto.org
+```
+
+Drain the node
+```
+oc adm drain worker01.ocp4.palmeto.org --ignore-daemonsets --delete-emptydir-data
+```
+
+Once you are done with node maintenance
+```
+oc adm uncordon worker01.ocp4.palmeto.org
+```
