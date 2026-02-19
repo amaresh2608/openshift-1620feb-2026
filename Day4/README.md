@@ -372,6 +372,26 @@ oc get imagestreams
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8834e622-c766-4827-ab9a-486154e3ddc8" />
 
 
+## Lab - Creating a Openshift secret to store your Docker Hub Login credentials
+```
+# The below command on successful login, creates a ~/.docker/config.json file
+docker login -u your-user
+
+# First approach
+oc create secret generic my-docker-account-secret \
+--from-file=.dockerconfigjson=~/.docker/config.json \
+--type=kubernetes.io/dockerconfigjson
+
+# Second approach
+oc create secret docker-registry my-docker-account-secret \
+--docker-server=docker.io \
+--docker-username=your-dockerhub-username \
+--docker-password=your-dockerhub-password \
+--docker-email=your-dockerhubregistered-email 
+
+oc screts link default my-docker-account-secret --for=pull
+```
+
 ## Lab - Configuring certain Openshift nodes for QA, Dev use
 
 Let's list all nodes
