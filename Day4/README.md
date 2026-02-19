@@ -199,6 +199,9 @@ oc expose svc/hello
 oc get route
 curl http://your-route-url
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a06d5a0a-e3ba-4e86-aa0f-e5a7ea4d9714" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/551e3fef-67d7-4594-aeb6-54a067eb9016" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/84f4a6ce-31ec-4b6f-906a-2273e3ba62ca" />
 
 ## Lab - Configuring certain Openshift nodes for QA, Dev use
 
