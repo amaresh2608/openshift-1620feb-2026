@@ -289,6 +289,48 @@ curl http://your-route-url
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/551e3fef-67d7-4594-aeb6-54a067eb9016" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/84f4a6ce-31ec-4b6f-906a-2273e3ba62ca" />
 
+
+## Lab - Login to Openshift's Internal image registry
+
+Let's see if there is public route for our Openshift Internal registry
+```
+oc get route -n openshift-image-registry
+```
+
+If you don't see a route there already, we need to create it
+```
+oc patch configs.imageregistry.operator.openshift.io/cluster \
+--type=merge \
+-p '{"spec":{"defaultRoute":true}}'
+```
+
+The above command will automatically create the route for the Openshift Internal Image registry
+```
+oc get route -n openshift-image-registry
+```
+
+We need to configure docker to support login to insecure registry
+```
+vim /etc/docker/daemon.json
+```
+<pre>
+{
+  "insecure-registries": ["default-route-openshift-image-registry.apps.ocp4.palmeto.org"]
+}
+</pre>
+
+Now, let's restart docker to apply the config changes done
+```
+sudo systemctl restart docker
+sudo systemctl status docker
+```
+
+We can now login to our Openshift Internal registry, assuming you have already logged in as admin user in the terminal
+```
+docker login -u $(oc whoami) -p $(oc whoami -t) default-route-openshift-image-registry.apps.ocp4.palmeto.org
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d2c02eb9-90d6-4083-a7fe-7a2d0a6f5f30" />
+
 ## Lab - Configuring certain Openshift nodes for QA, Dev use
 
 Let's list all nodes
