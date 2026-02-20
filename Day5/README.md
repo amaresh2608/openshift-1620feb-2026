@@ -136,7 +136,19 @@ oc get pods
 
 # You can now switch to your Openshift webconsole and access the route url to see the blog
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/f9c9f3af-a924-476e-883d-a79d43567431" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/4e52915e-fc5a-4348-b0d3-821463d165ac" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ad10963b-e38b-4340-8108-4431e233599c" />
 
+Once you are done with this lab exercise, you may delete it
+```
+oc project jegan
+helm list
+oc get pods
+helm uninstall wordpress
+oc get pods
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/dc17e157-4c9b-41b6-aaa7-94a3c7d79af5" />
 
 ## Info - Openshift Network Policy
 <pre>
