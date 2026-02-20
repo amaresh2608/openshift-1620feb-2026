@@ -18,12 +18,12 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      app: backend
+      app: mysql
   ingress:
   - from:
     - podSelector:
         matchLabels:
-          app: frontend
+          app: wordpress
     ports:
     - protocol: TCP
       port: 8080
