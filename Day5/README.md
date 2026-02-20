@@ -212,5 +212,10 @@ oc project jegan
 oc get pods
 
 cat allow-frontendpods-to-access-backend-pods.yml
+oc apply -f allow-frontendpods-to-access-backend-pods.yml
+oc get networkpolicy
 ```
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2df54956-0628-4e38-98e7-00a87948f8bd" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/074c31f0-5076-4c4a-bed4-2e250b2c0e0c" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b2515a8f-1e8d-4f7f-9903-2c50d19b9662" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/97d41752-74eb-47b7-8b9a-b9b5a0662eeb" />
+
