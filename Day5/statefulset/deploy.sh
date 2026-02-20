@@ -1,4 +1,5 @@
 echo -n "\nDeploying mysql primary master ...."
+oc apply -f mysql-nfs-storage.yml
 oc apply -f mysql-secret.yml
 oc apply -f mysql-primarymaster-service.yml
 
