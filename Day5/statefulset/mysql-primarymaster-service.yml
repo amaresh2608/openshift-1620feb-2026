@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql-primary-service"   # ← DNS name of primary podysql
+  name: mysql-primary   # ← DNS name of primary podysql
 spec:
   clusterIP: None
   ports:
