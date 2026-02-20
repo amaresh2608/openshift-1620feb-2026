@@ -1,5 +1,15 @@
 # Day 5
 
+## Request - Kindly provide your training feedback here ( Do it from Lab machine )
+<pre>
+https://forms.cloud.microsoft/r/rHwxwtmCte   
+</pre>
+
+## Request - Kindly complete the post-test ( Do it from Lab machine )
+<pre>
+https://forms.cloud.microsoft/r/PGuXsLdFEc
+</pre>
+
 ## Lab - Cloning TekTutor Training Repository ( In case you haven't done already )
 ```
 cd ~
