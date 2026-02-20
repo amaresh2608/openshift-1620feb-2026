@@ -219,3 +219,18 @@ oc get networkpolicy
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b2515a8f-1e8d-4f7f-9903-2c50d19b9662" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/97d41752-74eb-47b7-8b9a-b9b5a0662eeb" />
 
+## Lab - Allow traffic from external
+```
+cd ~/openshift-1620feb-2026
+git pull
+cd Day5/network-policy
+oc project jegan
+oc get pods
+
+cat allow-traffic-from-external.yml
+
+oc apply -f allow-traffic-from-external.yml
+oc get networkpolicy
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/04fd1c1c-6cfa-47b4-bc53-978defdf35df" />
