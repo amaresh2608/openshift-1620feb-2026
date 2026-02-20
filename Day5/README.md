@@ -161,3 +161,56 @@ oc get pods
 - Only traffic that are allowed by explicit Network policiy are permitted 
 - Multiple Policies in the same namespace(project) are combined(ORed together) 
 </pre>
+
+## Lab - Deny incoming traffic to Pods in a deployment
+```
+cd ~/openshift-1620feb-2026
+git pull
+cd Day5/network-policy
+oc project jegan
+# I'm assuming you have deployed wordpress and mysql using helm, hence wordpress and mysql pods might be there already
+oc get pods
+
+# First try accessing the wordpress blog, wordpress pod will try connecting to mysql pod to display the blog page
+# If you are able to see the blog page, then all incoming to mysql and wordpress works
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/06cd8b4f-c5b3-45a1-9657-9934bed62073" />
+
+
+Now, let's deny access by creating the network policy
+```
+cd ~/openshift-1620feb-2026
+git pull
+cd Day5/network-policy
+oc project jegan
+oc get pods
+cat deny-all-incoming-traffic.yml
+oc apply -f deny-all-incoming-traffic.yml
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3d0c6cdf-dec6-4f4c-ba3f-3f1e1628ffb3" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ccf4dd7b-0099-4014-ba97-9340c2c6e875" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/733d116d-5b3f-4ad2-9612-bee7dc09112d" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/24374087-d660-463d-9b1b-671f166d00b1" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2620bafb-80f7-4db2-b8ed-6d137449b763" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/58ffeb22-c172-4ca6-bfc9-830baab52a59" />
+
+
+Let's see if we delete the deny incoming traffic network policy, if we are able to access the wordpress blog page
+```
+oc delete -f deny-all-incoming-traffic.yml
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1bdafacb-3642-4aca-8067-b6a15d790bc0" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a3032534-1b4c-4d92-bb2d-45c65bfb5261" />
+
+## Lab - Allow incoming traffic from wordpress pods to mysql pods
+```
+cd ~/openshift-1620feb-2026
+git pull
+cd Day5/network-policy
+oc project jegan
+oc get pods
+
+cat allow-frontendpods-to-access-backend-pods.yml
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2df54956-0628-4e38-98e7-00a87948f8bd" />
