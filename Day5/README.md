@@ -99,6 +99,44 @@ curl http://192.168.100.50:8080
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/045297a6-238a-491d-a8c2-a2230d61f3aa" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c4521b0c-d8aa-4c76-b71f-be074d524a81" />
 
+## Info - Helm
+<pre>
+- Helm is a package manager for Kubernetes and Openshift Container Orchestration Platforms
+- Using Helm we can deploy,undeploy, upgrade applications into Kubernetes and Openshift
+- We need to package our Openshift manifest scripts as Helm chart in order to deploy/undeploy into K8s/Openshift
+</pre>  
+
+## Lab - Packaging wordpress application as Helm Chart
+```
+cd ~/openshift-1620feb-2026
+git pull
+cd Day5/helm
+
+# Create a helm chart
+helm create wordpress
+cd wordpress/templates
+rm -rf *
+cd ../..
+cp values.yaml wordpress
+cp manifest-scripts/* wordpress/templates
+
+# Create the helm chart package
+tree wordpress/
+helm package wordpress/
+ls
+
+# Install the wordpress helm chart into openshift
+oc delete project jegan
+oc new-project jegan
+helm install wordpress wordpress-1.0.0.tgz
+
+# List the helm releases
+helm list
+oc get pods
+
+# You can now switch to your Openshift webconsole and access the route url to see the blog
+```
+
 
 ## Info - Openshift Network Policy
 <pre>
